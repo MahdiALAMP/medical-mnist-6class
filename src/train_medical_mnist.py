@@ -22,18 +22,6 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # DATA LOADING
 # -----------------------
 def load_datasets():
-    """Load train and test datasets using an 80/20 split.
-
-    The directory structure under DATA_DIR is expected to be:
-
-    data/medical_mnist/
-        AbdomenCT/
-        BreastMRI/
-        ChestCT/
-        CXR/
-        Hand/
-        HeadCT/
-    """
     train_ds = tf.keras.utils.image_dataset_from_directory(
         DATA_DIR,
         labels="inferred",
